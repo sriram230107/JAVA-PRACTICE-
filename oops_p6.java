@@ -4,7 +4,7 @@ import java.util.*;
 class Help
 {
     Scanner sc=new Scanner(System.in);
-    private int a=sc.nextInt();
+    int a=sc.nextInt();
     private int c;
     int b;
     Help(int b)
