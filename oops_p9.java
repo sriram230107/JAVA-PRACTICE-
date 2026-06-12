@@ -6,9 +6,11 @@ class A
 {
     Scanner sc = new Scanner(System.in);
     int a=sc.nextInt();
+    int s;
     public void show()
     {
-        System.out.println("int a = "+a);
+        s=a;
+        System.out.println("int a = "+s);
     }
 }
 class B extends A
