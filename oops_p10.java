@@ -12,6 +12,7 @@ class B extends A
 {
     Scanner sc = new Scanner(System.in);
     int a;
+    @Override
     void show()
     {
         System.out.println("Enter a number ; ");
@@ -20,9 +21,6 @@ class B extends A
         super.show();
     }
 }
-
-
-
 public class oops_p10 {
     public static void main(String[] args)
     {
