@@ -6,8 +6,11 @@ public class oops_p12
 {
     public static void main(String[] args)
     {
-        Scanner sc=new Scanner(System.in);
-        String str=sc.nextLine();
+        String str="";
+        try(Scanner sc=new Scanner(System.in))
+        {
+            str+=sc.nextLine();
+        }
         int max=0;
         for(int i=0;i<str.length();i++)
         {
@@ -30,7 +33,7 @@ public class oops_p12
             {
                 max=ch.length();
             }
-            System.out.println("longest substring set is : "+ch);
+           // System.out.println("longest substring set is : "+ch);
         }
         System.out.println("maximum possible longest chain is ; "+max);
         
