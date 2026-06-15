@@ -1,42 +1,38 @@
 //Given a string s, find the length of the longest substring without repeating characters.
 
 import java.util.*;
+
 public class oops_p12
 {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Scanner sc=new Scanner(System.in);
-        String data=sc.nextLine();
-        String out="";
-        int[] a=new int[50];
-        for(int i=0;i<data.length();i++)
+        String str=sc.nextLine();
+        int max=0;
+        for(int i=0;i<str.length();i++)
         {
-            for(int j=i+1;j<data.length();j++)
+            String ch=""+str.charAt(i);
+            System.out.println("set of all substrings: "+ch);
+            for(int j=i+1;j<str.length();j++)
             {
-                if(data.charAt(i)==data.charAt(j))
+                if(ch.indexOf(str.charAt(j)) == -1)
+                {
+                    ch=ch+str.charAt(j);
+                    System.out.println("set of all substrings: "+ch);
+                }
+                else
                 {
                     break;
                 }
-                if(data.charAt(i)!=data.charAt(j))
-                {
-                    out=out+data.charAt(j);
-                    System.out.println("set is ;"+out);
-                }
-                
+
             }
-            a[i]=out.length();
-            out="";
-        }
-        int b=0;
-        for(int i=0;i<a.length;i++)
-        {
-            for(int j=i;j<a.length;j++)
+            if(ch.length()>max)
             {
-                if(a[i]<a[j])
-                {
-                    b=a[j];
-                }
+                max=ch.length();
             }
+            System.out.println("longest substring set is : "+ch);
         }
-        System.out.println("largest possible string without repeating letters is : "+b);
+        System.out.println("maximum possible longest chain is ; "+max);
+        
     }
 }
